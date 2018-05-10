@@ -1,0 +1,26 @@
+{
+  "name": "itvdn-landing",
+  "version": "1.0.0",
+  "description": "Testovi site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgheni-Nichitenco/itvdn-landing.git"
+  },
+  "author": "Evgeni Nichitenco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgheni-Nichitenco/itvdn-landing/issues"
+  },
+  "homepage": "https://github.com/Evgheni-Nichitenco/itvdn-landing#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "github:gulpjs/gulp#4.0"
+  },
+  "dependencies": {
+    "gulp-4.0.build": "^4.0.0-build.a271520"
+  }
+}

@@ -11,5 +11,8 @@ gulp -v
 
 git commit --amend -m "Новый комментарий"
 
-//
+npm i browser-sync --save-dev
+
+npm i gulpjs/gulp-cli#4.0 -g
+npm i gulp-4.0.build
 
