@@ -8,3 +8,54 @@ html(lang='ru')
     body
         h1 Hello Word
         p Шла собака по шоссе
+
+        a(href='vk.com') link 3
+
+
+        div
+            - var index = 1
+
+            select
+                while index <= 60
+                    option= index++
+
+
+        div
+            - var links = ['Home', 'Contacts', 'About', 'Price']
+            - var anoterLinks = ['AnoterHome', 'AnoterContacts']
+
+            ul.list
+                each link in links
+                    li.list__item
+                        if link === 'Home'
+                            span=link
+                        else
+                            a(href="#").list__link=link
+
+            ul
+                each link in anoterLinks
+                    li: a=link
+
+
+        div
+            -var homeLinks = ['Home', 'Anoter', 'Third']
+            -var second = ['Five', 'Six', 'Seven']
+
+            mixin list(items, className, active)
+                ul(class=className)
+                    each item, index in items
+                        li(class=className + '__item')
+                            if index === active
+                                span(class=className + '__active')=item
+                            else
+                                a(class=className + '__link')=item
+
+
+            +list(homeLinks, 'list', 0)
+            +list(second, 'list', 1)
+
+    // Комментарий
+
+    //
+        Это тоже
+        комментарий
