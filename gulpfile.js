@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const browsersync =require('browser-sync').create();
+const browsersync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
@@ -36,7 +36,8 @@ gulp.task('templates:compile', function buildHTML() {
 
 gulp.task('styles:compile', function () {
     return gulp.src('source/styles/main.scss')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
+        // .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('build/css'));
 });
